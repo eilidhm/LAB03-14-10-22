@@ -29,7 +29,11 @@ There are 935 observations and 26 variables.
 #### Code
 
 ```{r nobel-living}
-# remove this comment and add your code here
+nobel_living <- filter(nobel, 
+                       !is.na(country),
+                       gender != "org",
+                       is.na(died_date))
+
 ```
 
 #### Narrative
